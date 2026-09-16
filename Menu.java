@@ -6,58 +6,45 @@ public class Menu {
         Scanner sc = new Scanner(System.in);
 
 
-        Stack<PilaObjeto> Almacen = new Stack<>();
+        Stack<PilaObjeto> Registro = new Stack<>();
 
         boolean continuar = true;
         Metodos m = new Metodos();
 
         while (continuar) {
+            System.out.println("");
+            System.out.println("");
             System.out.println("'''''''''''''''''''''''''''");
-            System.out.println("Bienvenido a compute parcial plus por YEISON GUERRA");
+            System.out.println("Bienvenido a Cambio de texto parcial plus OMG por YEISON GUERRA"); // yo queria el punto 3
             System.out.println("''''''''''''''''''''''''''''");
             System.out.println("¿Que desea realizar????");
-            System.out.println("1) Ingresar equipo a almacen (Push)");
-            System.out.println("2) Mostrar almacen de equipos");
-            System.out.println("3) Buscar un equipo dentro de la pila");
-            System.out.println("4) Eliminar un equipo específico X");
-            System.out.println("5) Organizar almacen en orden");
-            System.out.println("6) Contar total de equipos activos");
-            System.out.println("7) Clonar/Duplicar almacen actual");
-            System.out.println("8) Invertir el orden de la pila");
-            System.out.println("9) Salir");
+            System.out.println("1. Registrar Cambio ");
+            System.out.println("2. Historial de cambios");
+            System.out.println("3. ver el ultimo cambio realizado" );
+            System.out.println("4. eliminar ultimo cambio realizado" );
+            System.out.println("5 Salir"); 
+            System.out.println("");
             int opt = sc.nextInt();
             switch (opt) {
                 case 1:
-                    Almacen = m.LlenarPila(Almacen);
+                    Registro = m.LlenarPila(Registro);
                     break;
                 case 2:
-                    m.MostrarPila(Almacen);
+                    m.MostrarPila(Registro);
                     break;
                 case 3:
-                    m.BuscarEquipo(Almacen);
+                    m.BuscarPeek(Registro);
                     break;
                 case 4:
-                    Almacen = m.EliminarEquipoX(Almacen);
+                    Registro = m.EliminarUltimoRegistro(Registro);
                     break;
                 case 5:
-                    Almacen = m.OrganizarOrden(Almacen);
-                    break;
-                case 6:
-                    m.ContarEquipos(Almacen);
-                    break;
-                case 7:
-                    m.DuplicarPila(Almacen);
-                    break;
-                case 8:
-                    Almacen = m.InvertirPila(Almacen);
-                    break;
-                case 9:
                     System.out.println("Hasta pronto :)");
                     System.out.println("-------------------");
                     continuar = false;
                     break;
                 default:
-                    System.out.println("OPCION NO VALIDA");
+                    System.out.println("OPCION NO VALIDA" );
                     break;
             }
         }

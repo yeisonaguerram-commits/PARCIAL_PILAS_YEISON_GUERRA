@@ -1,57 +1,59 @@
 public class PilaObjeto {
 
-    private String Nombre;
-    private int Codigo;
-    private double Precio;
-    private int Cantidad;
-    private int Estado;
+    private String textoAnterior;
+    private String textoNuevo;
+    private String Fecha;
+    private String NombreUsuario;
+    private int estado;
 
-
-    public PilaObjeto(String nombre, int codigo, double precio, int cantidad, int estado) {
-        this.Nombre = nombre;
-        this.Codigo = codigo;
-        this.Precio = precio;
-        this.Cantidad = cantidad;
-        this.Estado = estado;
+    public PilaObjeto(String textoAnterior, String textoNuevo, String fecha, String nombreUsuario, int estado) {
+        this.textoAnterior = textoAnterior;
+        this.textoNuevo = textoNuevo;
+        Fecha = fecha;
+        NombreUsuario = nombreUsuario;
+        this.estado = estado;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public String getTextoAnterior() {
+        return textoAnterior;
     }
 
-    public void setNombre(String nombre) {
-        this.Nombre = nombre;
+    public void setTextoAnterior(String textoAnterior) {
+        this.textoAnterior = textoAnterior;
     }
 
-    public int getCodigo() {
-        return Codigo;
+    public String getTextoNuevo() {
+        return textoNuevo;
     }
 
-    public void setCodigo(int codigo) {
-        this.Codigo = codigo;
+    public void setTextoNuevo(String textoNuevo) {
+        this.textoNuevo = textoNuevo;
     }
 
-    public double getPrecio() {
-        return Precio;
+    public String getFecha() {
+        return Fecha;
     }
 
-    public void setPrecio(double precio) {
-        this.Precio = precio;
+    public void setFecha(String fecha) {
+        Fecha = fecha;
     }
 
-    public int getCantidad() {
-        return Cantidad;
+    public String getNombreUsuario() {
+        return NombreUsuario;
     }
 
-    public void setCantidad(int cantidad) {
-        this.Cantidad = cantidad;
+    public void setNombreUsuario(String nombreUsuario) {
+        NombreUsuario = nombreUsuario;
     }
 
-    public int getEstado() {
-        return Estado;
+        public int estado() {
+        return estado;
     }
 
-    public void setEstado(int estado) {
-        this.Estado = estado;
+    public void estado(String estado) {
+        NombreUsuario = estado;
     }
+
+    
+
 }
